@@ -1,0 +1,32 @@
+{
+  "name": "webdriver-runner",
+  "version": "1.0.0",
+  "description": "custom runner for webdriver tests using mocha framework",
+  "main": "index.js",
+  "scripts": {
+    "compile" : "babel lib/ -d build/",
+    "test": "mocha specs/*.js",
+    "runner": "node main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lookatsrc/webdriver-runner"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lookatsrc/webdriver-runner/issues"
+  },
+  "homepage": "https://github.com/lookatsrc/webdriver-runner#readme",
+  "dependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^3.5.3",
+    "selenium-webdriver": "^3.4.0"
+  },
+  "devDependencies": {
+    "chromedriver": "^2.32.3",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.0"
+  }
+}
