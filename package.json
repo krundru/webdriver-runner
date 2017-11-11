@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "compile": "babel lib/ -d build/",
-    "runner": "node main.js"
+    "runner": "node main.js",
+    "test" : "npm run compile && npm run runner"
   },
   "repository": {
     "type": "git",
@@ -22,7 +23,8 @@
     "chai": "^4.1.2",
     "glob": "^7.1.2",
     "mocha": "^3.5.3",
-    "selenium-webdriver": "^3.4.0"
+    "selenium-webdriver": "^3.4.0",
+    "shortid": "^2.2.8"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
