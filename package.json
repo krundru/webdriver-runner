@@ -6,7 +6,7 @@
   "scripts": {
     "compile": "babel lib/ -d build/",
     "runner": "node main.js",
-    "test" : "npm run compile && npm run runner"
+    "test": "npm run compile && npm run runner"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,7 @@
   "homepage": "https://github.com/lookatsrc/webdriver-runner#readme",
   "dependencies": {
     "chai": "^4.1.2",
+    "chalk": "^2.3.0",
     "glob": "^7.1.2",
     "mocha": "^3.5.3",
     "selenium-webdriver": "^3.4.0",
