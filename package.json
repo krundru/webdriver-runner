@@ -1,7 +1,7 @@
 {
   "name": "webdriver-runner",
   "version": "1.0.0",
-  "description": "custom runner for webdriver tests using mocha framework",
+  "description": "Custom runner for webdriver tests using mocha framework",
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
@@ -11,15 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/lookatsrc/webdriver-runner"
+    "url": "git://github.com/krundru/webdriver-runner.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/lookatsrc/webdriver-runner/issues"
+    "url": "https://github.com/krundru/webdriver-runner/issues"
   },
-  "homepage": "https://github.com/lookatsrc/webdriver-runner#readme",
+  "homepage": "https://github.com/krundru/webdriver-runner#README",
   "dependencies": {
     "chai": "^4.1.2",
     "chalk": "^2.3.0",
