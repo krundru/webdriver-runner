@@ -4,6 +4,7 @@
   "description": "custom runner for webdriver tests using mocha framework",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint .",
     "compile": "babel lib/ -d build/",
     "runner": "node main.js",
     "test": "npm run compile && npm run runner"
@@ -29,7 +30,9 @@
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.0.2",
     "babel-preset-env": "^1.6.0",
-    "chromedriver": "^2.32.3"
+    "chromedriver": "^2.32.3",
+    "eslint": "^4.11.0"
   }
 }
