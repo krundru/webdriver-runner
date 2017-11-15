@@ -6,6 +6,9 @@ install:
 script:
   - npm run lint
 
+before_deploy:
+  - rm .gitignore
+
 deploy:
   provider: npm
   email: $NPM_EMAIL
