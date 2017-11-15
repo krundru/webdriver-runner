@@ -8,6 +8,7 @@ script:
 
 before_deploy:
   - rm .gitignore
+  - ls -l ./
 
 deploy:
   provider: npm
