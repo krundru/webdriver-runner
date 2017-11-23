@@ -3,11 +3,12 @@
   "version": "0.1.3",
   "description": "Custom runner for webdriver tests using mocha framework",
   "main": "build/launcher.js",
+  "engines": {
+    "node": ">=8.9.1"
+  },
   "scripts": {
     "lint": "eslint .",
-    "compile": "babel lib/ -d build/",
-    "runner": "node main.js",
-    "test": "npm run compile && npm run runner"
+    "compile": "babel lib/ -d build/"
   },
   "repository": {
     "type": "git",
