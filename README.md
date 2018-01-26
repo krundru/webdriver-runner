@@ -45,3 +45,30 @@ test.describe('Google search results', function f() {
 })
 ```
 
+Example code to configure test suites with browser-capabilities using `webdriver-runner.Launcher` 
+
+``` javascript
+const Launcher = require('webdriver-runner').Launcher
+const SpecSummary = require('webdriver-runner/reporters/spec-summary').default
+
+const request = {
+  mochaOptions: {
+    retries: 1,
+    requires: ['babel-core/register'],
+    timeout: 900000
+  },
+  reporters: [SpecSummary],
+  reporterOptions: {},
+  specs: [{
+    tests: ['tests/*.test.js'],
+    // each of this browser instance will be available to test-suite at runtime in global scope
+    // so, suite can build a new brower instance 
+    browsers: [{
+      name: 'chrome',
+      shard: 3
+    }]
+  }]
+}
+
+new Launcher(request).run()
+```
