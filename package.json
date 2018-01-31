@@ -1,6 +1,6 @@
 {
   "name": "webdriver-runner",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Custom runner for webdriver tests using mocha framework",
   "main": "./launcher.js",
   "engines": {

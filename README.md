@@ -1,9 +1,9 @@
-# webdriver-runner: synchronous driver 
+# webdriver-runner: synchronous driver
 
 Test runner for webdriver tests built on mochajs and selenium-webdriver. this project is heaviley inspired from WebdriverIO & Selenium-Webdriver
 
-List of features: 
-* Synchronous webdriver, free from promises & callbacks. 
+List of features:
+* Synchronous webdriver, free from promises & callbacks.
 * Parallelization of test suites
 * Custom reports - spec summary
 * Html reporter - pending
@@ -27,14 +27,14 @@ test.describe('Google search results', function f() {
   test.before(() => {
     const builder = new Builder()
       .withCapabilities(Capabilities.chrome())
-    // synchronize all driver methods 
-    driver = synchronize.driver(builder.build()) 
+    // synchronize all driver methods
+    driver = synchronize.driver(builder.build())
   })
 
   test.it('search-results-verify', () => {
     driver.get('https://www.facebook.com')
     const title = driver.findElement(By.css('h1')).getText()
-    console.log(title) 
+    console.log(title)
     const links = driver.findElements(By.css('a'))
     links[0].click() // click first link
   })
@@ -45,7 +45,7 @@ test.describe('Google search results', function f() {
 })
 ```
 
-Example code to configure test suites with browser-capabilities using `webdriver-runner.Launcher` 
+Example code to configure test suites with browser-capabilities using `webdriver-runner.Launcher`
 
 ``` javascript
 const Launcher = require('webdriver-runner').Launcher
@@ -61,8 +61,8 @@ const request = {
   reporterOptions: {},
   specs: [{
     tests: ['tests/*.test.js'],
-    // each of this browser instance will be available to test-suite at runtime in global scope
-    // so, suite can build a new brower instance 
+    // each of this browser instance will be available to test-suite at runtime in global scope (`global.browserConfig`)
+    // so, suite can build a new brower instance
     browsers: [{
       name: 'chrome',
       shard: 3
