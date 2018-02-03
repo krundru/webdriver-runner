@@ -1,13 +1,14 @@
 # webdriver-runner: synchronous driver
 
-Test runner for webdriver tests built on mochajs and selenium-webdriver. this project is heaviley inspired from WebdriverIO & Selenium-Webdriver
+**Synchronous webdriver & Test runner** for webdriver tests built on mochajs and selenium-webdriver. this project is heaviley inspired from WebdriverIO & Selenium-Webdriver
 
-List of features:
-* Synchronous webdriver, free from promises & callbacks.
+**List of features:**
+* Synchronous webdriver calls
+* Stick to selenium-webdriver API
 * Parallelization of test suites
 * Custom reports - spec summary
-* Html reporter - pending
-
+* Html reporter - *pending*
+* Screenshots - *pending*
 
 ## Usage
 
