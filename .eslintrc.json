@@ -81,6 +81,7 @@
     "no-script-url": 2,
     "no-self-compare": 2,
     "no-sequences": 2,
+    "no-unused-vars": [2, {"vars": "all", "varsIgnorePattern": "should" }],
     "no-unused-expressions": [2, {
         "allowShortCircuit": true,
         "allowTernary": true
