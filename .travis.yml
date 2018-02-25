@@ -5,14 +5,14 @@ install:
   - npm install
 script:
   - npm run lint
-  - npm run compile
 before_deploy:
   - rm .gitignore
-  - rm -fr lib && cp -r build/* . && rm -fr build
+  - cp -r lib/* . && rm -fr lib
+  - ls -l
 deploy:
   provider: npm
   email: $NPM_EMAIL
   api_key: $NPM_TOKEN
   skip_cleanup: true
   on:
-    branch: master
+    branch: *
