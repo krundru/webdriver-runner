@@ -1,40 +1,39 @@
 {
   "name": "webdriver-runner",
   "version": "0.8.11",
-  "description": "Custom runner for webdriver tests using mocha framework",
+  "description": "synchronized webdriver runner",
+  "homepage": "https://github.com/krundru/webdriver-runner#README",
   "main": "./launcher.js",
   "engines": {
-    "node": ">=8.9.1"
+    "node": ">=8.0.0"
   },
   "scripts": {
-    "lint": "eslint .",
-    "compile": "babel lib/ -d build/"
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",
     "url": "git://github.com/krundru/webdriver-runner.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Kumara Undru <raja.undru@gmail.com>",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/krundru/webdriver-runner/issues"
   },
-  "homepage": "https://github.com/krundru/webdriver-runner#README",
   "dependencies": {
-    "chai": "^4.1.2",
-    "chalk": "^2.3.0",
+    "chalk": "^2.3.1",
     "fibers": "^2.0.0",
-    "glob": "^7.1.2",
-    "mocha": "^3.5.3",
-    "selenium-webdriver": "^3.4.0",
+    "mocha": "^5.0.0",
     "shortid": "^2.2.8"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-eslint": "^8.0.2",
-    "babel-preset-env": "^1.6.0",
-    "chromedriver": "^2.32.3",
     "eslint": "^4.11.0"
-  }
+  },
+  "keywords": [
+    "selenium",
+    "webdriver",
+    "runner",
+    "synchronized",
+    "sync",
+    "blocking"
+  ]
 }
