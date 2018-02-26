@@ -1,3 +1,6 @@
 node_modules
 build
 yarn.lock
+examples/node_modules
+examples/.npmrc
+examples/*.png
