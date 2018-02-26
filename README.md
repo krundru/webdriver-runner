@@ -167,8 +167,8 @@ const request = {
   reporterOptions: {},
   specs: [{
     tests: ['tests/*.test.js'],
-    // each of this browser instance will be available to test-suite at runtime in global scope (`global.browserConfig`)
-    // so, suite can build a new brower instance
+    // each of this browser instance will be available to test script at runtime in 
+    // global scope (`global.browserConfig`). so, test can build a requested browser.
     browsers: [{
       name: 'chrome',
       shard: 3
