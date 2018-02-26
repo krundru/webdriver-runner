@@ -1,6 +1,13 @@
-# webdriver-runner: synchronous driver
+# webdriver-runner
 
-**Synchronous webdriver & Test runner** for webdriver tests built on mochajs and selenium-webdriver. this project is heaviley inspired from WebdriverIO & Selenium-Webdriver
+``` javascript
+  driver.get('https://github.com')
+  const exploreLink = driver.findElements(By.css('.HeaderNavlink'))[3]
+  exploreLink.click()
+  driver.sleep(5000) 
+```
+
+Simple test runner for **Synchronized selenium webdriver** tests built on mochajs and selenium-webdriver. this project is heaviley inspired from WebdriverIO & Selenium-Webdriver
 
 **List of features:**
 * Synchronous webdriver calls
