@@ -24,11 +24,12 @@ webdriver-runner is a simple test runner for webdriver tests. The main features 
 * Running tests parellel.
 * Reporting capabilities.
 
-Webdriver-Runner provides `Launcher` API to trigger tests. it takes a request object of test-files, mocha-options, browser capabilities and others to run. As of now, this library only provides programmable launcher. 
+it provides `Launcher` API to trigger tests. it takes a request object of test-files, mocha-options, browser capabilities and others to run. As of now, this library only provides programmable launcher. 
 
 Simple code snippet to start tests:
 
 ``` javascript
+  # file: test/runner.js
   const Launcher = require('webdriver-runner').Launcher
   const request = {
     specs: [
@@ -38,9 +39,13 @@ Simple code snippet to start tests:
   }
  new Launcher(request).run()
 ```
+Then
+
+`node test/runner.js` will start the tests. 
+
 ### Create webdriver instance
 
-To keep this library simple & provide maxium flexibility, it dependes on test scripts to create webdriver instance but provides a thin wrap to make driver instance synchronous. So test script will below code snippet
+To keep this library simple, it delegates the **task of building webdriver instance** to test scripts, however it provides a thin wrapper to make the driver instance synchronous. So test script will have 
 
 ``` javascript
   # file: home-page.test.js 
@@ -56,13 +61,13 @@ To keep this library simple & provide maxium flexibility, it dependes on test sc
   })
 ```
 Few important things here are:
-* `webdriver-runner/synchronize` provides `driver` method which wraps origin webdriver instance for adding synchronous capabilities
-* `webdriver-test/testing` has all test hooks to provide synchronous context on which driver calls will execute. 
+* `webdriver-runner/synchronize` has `driver` method which makes the origin webdriver instance as synchronous.
+* `webdriver-test/testing` has extended test hooks to provide the context on which synchronous driver calls will execute. 
 * Calling synchronous methods outside test-hooks will throw Errors. 
 
 ### Get browser config
 
-webdriver-runner's Launcher will pass the browser-config to test scripts through global scope. it is test scripts responsibility to create an instance. 
+webdriver-runner's Launcher will pass the browser-config to test scripts through global scope. it is test scripts responsibility to create an instance for given requirement.
 
 For example: 
 `global.browserConfig` will hold the browser object set to Launcher request. 
@@ -80,7 +85,7 @@ const driverPromise = builder.build()
 
 ### Test request API
 
-Lets look at other fields in the test request 
+Lets look at the fields of test request 
 
 ``` javascript
 const request = {
