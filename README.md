@@ -15,11 +15,11 @@ Simple test runner for **Synchronized selenium webdriver** tests built on mochaj
 
 `npm install webdriver-runner`
 
-Note: `selenium-webdriver` will not be installed as it is not a direct dependency. Client is free to install any versio of selenium-webdriver. 
+Note: `selenium-webdriver` will not be installed as it is not a direct dependency. Client is free to install any version of selenium-webdriver. 
 
 ## Getting started
 
-We are exited that you want to try webdriver-runner. 
+We are excited that you want to try webdriver-runner. 
 
 webdriver-runner is a simple test runner for webdriver tests. The main features it provides are 
 * Making webdriver synchronous.
@@ -45,7 +45,7 @@ Then
 
 `node test/runner.js` will start the tests. 
 
-### Create webdriver instance
+### Build webdriver instance
 
 To keep this library simple, it delegates the **task of building webdriver instance** to test scripts, however it provides a thin wrapper to make the driver instance synchronous. So test script will have 
 
