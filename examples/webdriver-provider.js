@@ -1,4 +1,4 @@
-const synchronize = require('webdriver-runner/lib/synchronize')
+const synchronize = require('webdriver-runner/synchronize')
 import {
   Builder, Capabilities
 } from 'selenium-webdriver'
