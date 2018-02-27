@@ -1,9 +1,9 @@
 import assert from 'assert'
 import fs from 'fs'
 import webdriverProvider from './webdriver-provider'
-import test from 'webdriver-runner/lib/testing'
-import wdUtil from 'webdriver-runner/lib/util'
-import * as syncr from 'webdriver-runner/lib/synchronize'
+import test from 'webdriver-runner/testing'
+import wdUtil from 'webdriver-runner/util'
+import * as syncr from 'webdriver-runner/synchronize'
 import { By } from 'selenium-webdriver'
 
 test.describe('Github home page', function() {
