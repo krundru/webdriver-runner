@@ -1,6 +1,6 @@
 {
   "name": "webdriver-runner",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "description": "synchronized webdriver runner",
   "homepage": "https://github.com/krundru/webdriver-runner#README",
   "main": "./launcher.js",
