@@ -9,7 +9,7 @@
 
 Simple test runner for **Synchronized selenium webdriver** tests built on mochajs and selenium-webdriver. this project is heaviley inspired from WebdriverIO & Selenium-Webdriver
 
-> Basic examples are at [lib/examples](https://github.com/krundru/webdriver-runner/tree/readme-update/examples)
+> Basic examples are at [lib/examples](https://github.com/krundru/webdriver-runner/tree/master/examples)
 
 ## Install
 
@@ -26,7 +26,7 @@ webdriver-runner is a simple test runner for webdriver tests. The main features 
 * Running tests parellel.
 * Reporting capabilities.
 
-it provides `Launcher` API to trigger tests. it takes a request object of test-files, mocha-options, browser capabilities and others to run. As of now, this library only provides programmable launcher. 
+it provides `Launcher` API to trigger tests. it takes a configuration object with test-files, mocha-options, browser capabilities and others to run. As of now, this library only provides programmable launcher. 
 
 Simple code snippet to start tests:
 
@@ -85,7 +85,7 @@ if (browser.name === 'chrome') {
 const driverPromise = builder.build()
 ```
 
-### Test request API
+### Test configuration API
 
 Lets look at the fields of test request 
 
