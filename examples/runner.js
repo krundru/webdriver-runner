@@ -1,5 +1,5 @@
-const Launcher = require('webdriver-runner/lib/launcher').Launcher
-const SpecSummary = require('webdriver-runner/lib/reporters/spec-summary')
+const Launcher = require('webdriver-runner/launcher').Launcher
+const SpecSummary = require('webdriver-runner/reporters/spec-summary')
 
 const request = {
   mochaOptions: {
