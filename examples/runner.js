@@ -1,5 +1,42 @@
 const Launcher = require('webdriver-runner/launcher').Launcher
 const SpecSummary = require('webdriver-runner/reporters/spec-summary')
+const events = require('events')
+
+/**
+ * Simple reporter to log test name, file, status together.
+ */
+class Reporter extends events.EventEmitter {
+  constructor(store) {
+    super(store)
+    this.store = store
+    this.on('test:start', this.testStart.bind(this))
+    this.on('test:end', this.testEnd.bind(this))
+  }
+
+  testStart(payload) {
+    console.log(`test ${this.getTitle(payload)} is started`)
+  }
+
+  testEnd(payload) {
+    const title = this.getTitle(payload)
+    if (payload.state === 'passed') {
+      const msg = `${title} is passed`
+      console.log(`test ${msg}`)
+    } else if (payload.pending) {
+      const msg = `${title} is skipped`
+      console.log(`test ${msg}`)
+    } else {
+      console.error(payload.err.stack)
+      const msg = `${title} is failed`
+      console.log(`test ${msg}`)
+    }
+  }
+
+  getTitle(payload) {
+    const file = payload.file.split('/').pop()
+    return `${file}:${payload.title}`
+  }
+}
 
 const request = {
   mochaOptions: {
@@ -12,7 +49,7 @@ const request = {
     '--upload',
     '--env=prod'
   ],
-  reporters: [SpecSummary],
+  reporters: [Reporter, SpecSummary],
   reporterOptions: {},
   specs: [{
     tests: ['*.test.js'],
