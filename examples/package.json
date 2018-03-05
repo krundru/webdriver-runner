@@ -4,7 +4,8 @@
   "description": "basic examples on webdriver-runner",
   "main": "runner.js",
   "scripts": {
-    "test": "node runner.js"
+    "test": "node runner.js",
+    "copy": "cp -r ../lib/* node_modules/webdriver-runner"
   },
   "keywords": [
     "webdriver",
