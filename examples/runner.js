@@ -6,9 +6,10 @@ const events = require('events')
  * Simple reporter to log test name, file, status together.
  */
 class Reporter extends events.EventEmitter {
-  constructor(store) {
-    super(store)
+  constructor(store, reporterOptions) {
+    super()
     this.store = store
+    this.reporterOptions = reporterOptions
     this.on('test:start', this.testStart.bind(this))
     this.on('test:end', this.testEnd.bind(this))
   }
