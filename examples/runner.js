@@ -27,7 +27,7 @@ class Reporter extends events.EventEmitter {
       const msg = `${title} is skipped`
       console.log(`test ${msg}`)
     } else {
-      console.error(payload.err.stack)
+      console.error(payload.error.stack)
       const msg = `${title} is failed`
       console.log(`test ${msg}`)
     }
