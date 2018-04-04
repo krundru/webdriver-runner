@@ -1,5 +1,6 @@
 const Launcher = require('webdriver-runner/launcher').Launcher
 const SpecSummary = require('webdriver-runner/reporters/spec-summary')
+const JsonReporter = require('../lib/reporters/json-reporter');
 const events = require('events')
 
 /**
@@ -50,7 +51,7 @@ const request = {
     '--upload',
     '--env=prod'
   ],
-  reporters: [Reporter, SpecSummary],
+  reporters: [Reporter, JsonReporter],
   reporterOptions: {},
   specs: [{
     tests: ['*.test.js'],
