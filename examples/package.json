@@ -23,6 +23,6 @@
     "mocha": "^5.0.1",
     "selenium-webdriver": "^3.6.0",
     "shortid": "^2.2.8",
-    "webdriver-runner": "^0.9.6"
+    "webdriver-runner": "^0.9.7"
   }
 }
