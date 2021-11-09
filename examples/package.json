@@ -4,8 +4,7 @@
   "description": "basic examples on webdriver-runner",
   "main": "runner.js",
   "scripts": {
-    "test": "node runner.js",
-    "copy": "cp -r ../lib/* node_modules/webdriver-runner"
+    "test": "node runner.js"
   },
   "keywords": [
     "webdriver",
@@ -18,11 +17,10 @@
     "babel-core": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "chalk": "^2.3.1",
-    "chromedriver": "^2.33.2",
-    "fibers": "^2.0.0",
+    "chromedriver": "^95.0.0",
     "mocha": "^5.0.1",
     "selenium-webdriver": "^3.6.0",
     "shortid": "^2.2.8",
-    "webdriver-runner": "^0.9.7"
+    "webdriver-runner": "^1.1.0"
   }
 }
